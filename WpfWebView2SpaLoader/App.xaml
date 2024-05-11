@@ -1,0 +1,10 @@
+﻿<Application x:Class="WpfWebView2SpaLoader.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfWebView2SpaLoader"
+             Startup="ApplicationStartup">
+    <!-- 这里将 StartupUri 属性删除，然后注册 Startup 事件 -->
+    <Application.Resources>
+
+    </Application.Resources>
+</Application>

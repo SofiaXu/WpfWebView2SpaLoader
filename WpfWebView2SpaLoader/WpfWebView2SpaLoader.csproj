@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- 这里插入 WebView2 的包，用于显示网页 -->
+		<PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2478.35" />
+		<!-- 这里插入 ASP.NET Core 的框架引用，用于代理资源文件 -->
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- 这里模仿 ASP.NET Core，将 SPA 资源文件存于 wwwroot 文件夹下 -->
+		<None Update="wwwroot\**">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>
+
